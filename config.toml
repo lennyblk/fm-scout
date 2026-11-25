@@ -1,0 +1,29 @@
+# Tout est facultatif : sans réglage, les exports sont cherchés dans les
+# dossiers par défaut des exporteurs FM27 (Windows et Mac).
+[fmsave]
+# Source par défaut. Vide = save la plus récente ; sinon partie du nom ("Ajax") ou chemin.
+# Remplaçable par FM_SCOUT_SAVE ou --save.
+save = ""
+# Montant affiché en jeu / montant brut affiché par fm-scout. 0 = pas de conversion.
+money_rate = 1.167
+currency = "EUR"
+# true = lit la vraie CA/PA (cachée par le jeu) ; nécessaire pour que le potentiel compte.
+show_hidden = true
+
+# Utilisé à la place de la save si path (ou --csv) est renseigné.
+[csv]
+# Fichier .csv ou dossier d'exports. Remplaçable par FM_SCOUT_CSV ou --csv.
+path = ""
+# Vos propres versions de columns.yaml / roles.yaml (vide = versions fournies).
+columns_file = ""
+roles_file = ""
+zones_file = ""
+recommend_file = ""
+
+# LLM local (serveur compatible OpenAI). FM_SCOUT_MODEL et FM_SCOUT_LLM_URL sont prioritaires.
+[llm]
+base_url = "http://localhost:11434/v1"
+model = "fm-scout"
+timeout = 300
+# "" = défaut du serveur ; "none" coupe la réflexion si le modèle le permet (plus rapide).
+reasoning_effort = ""

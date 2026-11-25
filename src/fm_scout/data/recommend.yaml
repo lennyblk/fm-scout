@@ -1,0 +1,23 @@
+# Réglages des recommandations. Tous modifiables.
+peer_clubs: 20          # nombre de clubs de réputation proche servant de référence
+weights:                # points de priorité
+  no_starter: 40        # personne pour le poste
+  no_backup: 15         # pas de doublure
+  starter_gap: 4        # par point de score sous la référence
+  backup_gap: 1         # par point de la doublure sous la référence - backup_tolerance
+  starter_aging: 8      # titulaire âgé de aging_age ou plus
+  starter_expiring: 8   # contrat du titulaire finissant avant la saison suivante
+backup_tolerance: 5     # une doublure peut être ce nombre de points sous la référence
+aging_age: 31
+fee_margin: 1.25        # prix prévu = valeur estimée x marge (la valeur n'est pas un prix demandé)
+max_age: 28             # recrues
+# Potentiel : bonus = growth_weight x (PA - CA), entier jusqu'à growth_full_age, nul à growth_zero_age.
+growth_weight: 0.08
+growth_full_age: 20
+growth_zero_age: 26
+prospect_tolerance: 4   # un espoir peut être ce nombre de points sous le niveau exigé, si son bonus compense
+reputation_margin: 300  # club vendeur au plus à cette réputation au-dessus du mien
+wage_factor: 1.0        # salaire max = facteur x plus gros salaire de mon effectif
+min_upgrade: 1.0        # points de score gagnés au minimum
+priorities: 4
+candidates: 5

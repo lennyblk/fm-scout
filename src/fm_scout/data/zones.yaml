@@ -1,0 +1,11 @@
+# Zone -> postes regroupés et nombre de joueurs souhaité. Modifiable.
+gardien: {positions: [GK], target: 2}
+defense centrale: {positions: [DC], target: 4}
+lateral gauche: {positions: [DL, WBL], target: 2}
+lateral droit: {positions: [DR, WBR], target: 2}
+milieu defensif: {positions: [DM], target: 2}
+milieu central: {positions: [MC], target: 3}
+milieu offensif: {positions: [AMC], target: 1}
+aile gauche: {positions: [ML, AML], target: 2}
+aile droite: {positions: [MR, AMR], target: 2}
+attaque: {positions: [ST], target: 2}
