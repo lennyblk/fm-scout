@@ -75,9 +75,6 @@ class FmsaveSource:
             raise ScoutError(f"fmsave ne peut pas lire {path.name} : {e}\n"
                              "Mettez fmsave à jour ou utilisez un export CSV (--csv).") from e
         data.origin = [str(path)]
-        if any(issubclass(w.category, fmsave.UnknownBuildWarning) for w in caught):
-            data.warnings.append("Version du jeu non vérifiée par fmsave : contrôlez quelques "
-                                 "joueurs dans FM avant de vous y fier.")
         data.warnings += sorted({str(w.message) for w in caught
                                  if issubclass(w.category, fmsave.ReaderCheckWarning)})
         if self._rate is None:
